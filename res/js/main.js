@@ -87,8 +87,6 @@ function enemyAttack() {
   if (!gameEnd && gameStart) {
     let check = false;
     let boat = 0;
-    let count = 0;
-    let check2 = false;
     let ran = 0;
     do{
       check2 = false;
@@ -104,7 +102,7 @@ function enemyAttack() {
       if (ships[i] == ran) {
         check = true;
         boat = ran;
-        count = i;
+        counter = i;
       }
     }
     if (check) {
@@ -137,17 +135,17 @@ function startGame() {
 
 for (let index = 0; index < arr.length; index++) {
   arr[index].addEventListener("click", () => {
-    let pozice = index;
+    let position = index;
     let isBoat = false;
     for (let i = 0; i < ships.length; i++) {
-      if (ships[i] == pozice) {
+      if (ships[i] == position) {
         isBoat = true;
       }
     }
     if (numberOfShips > 0 && !isBoat) {
-      arr[pozice].style.backgroundImage = img;
+      arr[position].style.backgroundImage = img;
       numberOfShips--;
-      ships.push(pozice);
+      ships.push(position);
       if (numberOfShips == 0) {
         startBtn.innerHTML = `START`;
       }
