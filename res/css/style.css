@@ -3,30 +3,37 @@ body {
     background-size: cover;
     font-family: 'Courier New', Courier, monospace;
 }
-td{
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
+
+h1{
+    text-align: center;
+    font-size: 50px;
 }
-table{
-    border: solid black 1px;
-    background-color: white;
-}
+
 div{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-h1{
-    text-align: center;
-    font-size: 50px;
-}
+
 #gap1{
     width: 500px;
 }
+
 #gap2{
     width: 50px;
 }
+
+table{
+    border: solid black 1px;
+    background-color: white;
+}
+
+td{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
 #startBtn{
     margin-top: 50px;
     box-shadow: 0 0 10px;
@@ -41,17 +48,21 @@ h1{
     transition: 0.5s;
     cursor: pointer;
 }
+
 #startBtn:hover{
     background-color: lightblue;
     transition: 0.5s;
 }
-.arr2{
-    background-size: cover;
-}
+
 .arr{
     background-size: cover;
     
 }
+
+.arr2{
+    background-size: cover;
+}
+
 p{
     padding: 0;
     margin: 0;
