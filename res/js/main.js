@@ -135,17 +135,17 @@ function startGame() {
 
 for (let index = 0; index < arr.length; index++) {
   arr[index].addEventListener("click", () => {
-    let position = index;
+    let pozice = index;
     let isBoat = false;
     for (let i = 0; i < ships.length; i++) {
-      if (ships[i] == position) {
+      if (ships[i] == pozice) {
         isBoat = true;
       }
     }
     if (numberOfShips > 0 && !isBoat) {
-      arr[position].style.backgroundImage = img;
+      arr[pozice].style.backgroundImage = img;
       numberOfShips--;
-      ships.push(position);
+      ships.push(pozice);
       if (numberOfShips == 0) {
         startBtn.innerHTML = `START`;
       }
