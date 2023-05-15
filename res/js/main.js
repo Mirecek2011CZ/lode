@@ -129,7 +129,7 @@ function enemyAttack() {
 
 
 function startGame() {
-  startBtn.innerHTML = `PLAY!!`;
+  startBtn.innerHTML = `PLAY!`;
   let check = true;
   armed = true;
 }
