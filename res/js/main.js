@@ -1,11 +1,12 @@
 let numberOfShips = 4;
-let armed = false;
 let gameEnd = false;
 let gameStart = false;
 let ships = [];
+let enemyAttacks = [];
 let enemyShips = [];
 let attacks = [];
-let enemyAttacks = [];
+let armed = false;
+
 
 
 const arr = document.getElementsByClassName("arr");
@@ -41,7 +42,6 @@ for (let index = 0; index < arr2.length; index++) {
         if (check) {
           arr2[position].style.backgroundImage = img2;
           enemyShips[counter] = 50;
-          console.log(enemyShips)
           enemyAttack();
           if (
             enemyShips[0] == 50 &&
@@ -82,6 +82,11 @@ startBtn.onclick = () => {
   }
 };
 
+function startGame() {
+  startBtn.innerHTML = `PLAY!`;
+  let check = true;
+  armed = true;
+}
 
 function enemyAttack() {
   if (!gameEnd && gameStart) {
@@ -107,7 +112,7 @@ function enemyAttack() {
     }
     if (check) {
       arr[boat].style.backgroundImage = img2;
-      ships[count] = 50;
+      ships[counter] = 50;
     } else {
       arr[ran].style.backgroundImage = img3;
     }
@@ -119,17 +124,10 @@ function enemyAttack() {
     ships[3] == 50
   ) {
     gameEnd = true;
-    startBtn.innerHTML = `ENEMY WINS`;
+    startBtn.innerHTML = `YOU LOST`;
   } else {
     armed = true;
   }
-}
-
-
-function startGame() {
-  startBtn.innerHTML = `PLAY!`;
-  let check = true;
-  armed = true;
 }
 
 
