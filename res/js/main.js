@@ -17,9 +17,9 @@ const img2 = "url(./res/img/image2.png)";
 const img3 = "url(./res/img/cross.png)";
 
 
-for (let index = 0; index < arr2.length; index++) {
-  arr2[index].addEventListener("click", () => {
-    let position = index;
+for (let i = 0; i < arr2.length; i++) {
+  arr2[i].addEventListener("click", () => {
+    let position = i;
     let check = false;
     let check2 = false;
     let counter = 0;
@@ -61,12 +61,12 @@ for (let index = 0; index < arr2.length; index++) {
   });
 }
 
-for (let index = 0; index < 4; index++) {
+for (let i = 0; i < 4; i++) {
   let random = Math.floor(Math.random() * 25);
   let check = false;
   for (let i = 0; i < enemyShips.length; i++) {
     if (enemyShips[i] == random) {
-      index--;
+      i--;
       check = true;
     }
   }
@@ -131,9 +131,9 @@ function enemyAttack() {
 }
 
 
-for (let index = 0; index < arr.length; index++) {
-  arr[index].addEventListener("click", () => {
-    let pozice = index;
+for (let i = 0; i < arr.length; i++) {
+  arr[i].addEventListener("click", () => {
+    let pozice = i;
     let isBoat = false;
     for (let i = 0; i < ships.length; i++) {
       if (ships[i] == pozice) {
