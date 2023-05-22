@@ -20,7 +20,7 @@ const img3 = "url(./res/img/cross.png)";
 for (let i = 0; i < arr2.length; i++) {
   arr2[i].addEventListener("click", () => {
     let position = i;
-    let check = false;
+    let check1 = false;
     let check2 = false;
     let counter = 0;
     if (!gameEnd && gameStart) {
@@ -35,11 +35,11 @@ for (let i = 0; i < arr2.length; i++) {
         attacks.push(position);
         for (let i = 0; i < enemyShips.length; i++) {
           if (enemyShips[i] == position) {
-            check = true;
+            check1 = true;
             counter = i;
           }
         }
-        if (check) {
+        if (check1) {
           arr2[position].style.backgroundImage = img2;
           enemyShips[counter] = 50;
           enemyAttack();
